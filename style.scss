@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+$backgroundSite: rgb(241, 228, 230);
+$widthSite: 1600px;
+$additionalBackgroundSite: rgb(34, 34, 34);
+$whiteBackgroundSite: rgb(255, 255, 255);
+$mainFont: 'Lato', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +14,7 @@
 
 body {
     scroll-behavior: smooth;
-    background: rgb(241, 228, 230);
+    background: $backgroundSite;
     height: 764px;
 }
 
@@ -22,21 +28,20 @@ h2,
 p,
 a,
 button {
-    font-family: "Lato", sans-serif;
+    font-family: $mainFont;
     font-weight: 700;
 }
 
 .container {
-    max-width: 1600px;
+    max-width: $widthSite;
     margin: 0 auto;
 }
 
 .header {
-    background: rgb(34, 34, 34);
+    background: $additionalBackgroundSite;
 }
 
 .navigation {
-    width: 1600px;
     height: 75px;
     display: flex;
     align-items: center;
@@ -48,38 +53,33 @@ button {
         border: 0;
         cursor: pointer;
     }
-}
-
-.navContent_leftSide1 {
-    display: flex;
-    align-items: center;
-    margin-left: 231px;
-    background: rgb(34, 34, 34);
-}
-
-.navContent_leftSide2 {
-    display: flex;
-    align-items: center;
-    margin-left: 41px;
-}
-
-.navContent_rightSide1 {
-    display: flex;
-    align-items: center;
-    margin-left: 859px;
-}
-
-.navContent_rightSide2 {
-    display: flex;
-    align-items: center;
-    margin-left: 65px;
-}
-
-.navContent_rightSide3 {
-    display: flex;
-    align-items: center;
-    margin-left: 65px;
-    margin-top: 15px;
+    &__contLeftSide1 {
+        display: flex;
+        align-items: center;
+        margin-left: 231px;
+        background: rgb(34, 34, 34);
+    }
+    &__contLeftSide2 {
+        display: flex;
+        align-items: center;
+        margin-left: 41px;
+    }
+    &__contRightSide1 {
+        display: flex;
+        align-items: center;
+        margin-left: 859px;
+    }
+    &__contRightSide2 {
+        display: flex;
+        align-items: center;
+        margin-left: 65px;
+    }
+    &__contRightSide3 {
+        display: flex;
+        align-items: center;
+        margin-left: 65px;
+        margin-top: 15px;
+    }
 }
 
 .menu-container {
@@ -88,43 +88,23 @@ button {
 
 #menu {
     color: rgb(111, 110, 110);
-    font-family: Lato;
+    font-family: $mainFont;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
     list-style-type: none;
-
-    /* Убираем маркеры списка */
     padding: 0;
-
-    /* Убираем отступы */
     margin: 0;
-
-    /* Убираем поля */
-    background-color: rgb(255, 255, 255);
-
-    /* Цвет фона меню */
+    background-color: $whiteBackgroundSite;
     border: 1px solid #ccc;
-
-    /* Рамка вокруг меню */
     position: absolute;
-
-    /* Чтобы меню не смещалось */
     top: 40px;
-
-    /* Положение под кнопкой */
     right: 0px;
     top: 75px;
-
     li {
         padding: 10px;
-
-        /* Отступы внутри элементов списка */
-
         &:hover {
             background-color: #e0e0e0;
-
-            /* Цвет при наведении на элемент списка */
         }
     }
 }
@@ -132,110 +112,121 @@ button {
 .hidden {
     display: none;
 
-    /* Скрывает меню */
 }
 
-.mainContent {
+.mainCover {
     display: flex;
     width: 100%;
     align-items: flex-start;
-}
-
-.mainContent_leftSide {
-    display: flex;
-    flex: 0 0 800.58px;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-.mainContent_rightSide {
-    h2 {
+    &__leftSide {
         display: flex;
-        justify-content: start;
-        align-items: flex-end;
-        flex: 1;
-        font-family: 'Lato';
-        margin-top: 290px;
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 0%;
+        flex: 0 0 800.58px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
-
-    h1 {
-        display: flex;
-        justify-content: start;
-        align-items: flex-end;
-        flex-grow: 1;
-        font-family: 'Lato';
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 0%;
+    &__rightSide {
+        h2 {
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
+            flex: 1;
+            font-family: $mainFont;
+            margin-top: 290px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        h1 {
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
+            flex-grow: 1;
+            font-family: $mainFont;
+            font-size: 32px;
+            font-weight: 700;
+        }
     }
 }
 
-.main2 {
-    position: relative;
-    width: 1600px;
-    height: 2121px;
-    background: rgb(255, 255, 255);
-}
 
 .category {
+    position: relative;
+    width: $backgroundSite;
+    height: 2121px;
+    background: $whiteBackgroundSite;
+}
+
+.categoryButton {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    button {
+        background: transparent;
+        border: 0;
+    }
+    &__smallImg {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 65px;
 
-.category1 {
-    display: flex;
-    flex-direction: space-between;
-    gap: 30px;
-    margin-top: 65px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__bigImg {
+        display: flex;
+        margin-top: 30px;
 
-    img {
-        display: block;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .item {
+        position: relative; /* ОЧЕНЬ ВАЖНО! Это нужно, чтобы .text позиционировался относительно кнопки */
+        background: transparent;
+        border: 0;
+        padding: 0;
         width: 100%;
-        height: auto;
+        display: flex;
+        overflow: hidden;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 20px;
+        width: 80%;
+        max-width: 90%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-.category2 {
-    display: flex;
-    margin-top: 30px;
-
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-}
-
-.category button {
-    background: transparent;
-    border: 0;
-}
-
-.text {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-}
-
-.mainText {
+.headingCardsText {
     h1 {
         color: rgb(34, 34, 34);
-        font-family: 'Lato';
+        font-family: $mainFont;
         font-size: 30px;
         font-weight: 400;
         line-height: 36px;
-        letter-spacing: 0%;
         text-align: left;
         margin-left: 711px;
         margin-top: 96px;
@@ -243,7 +234,7 @@ button {
 
     p {
         color: rgb(159, 159, 159);
-        font-family: 'Lato';
+        font-family: $mainFont;
         font-size: 14px;
         font-weight: 400;
         line-height: 17px;
@@ -261,140 +252,139 @@ button {
     gap: 30px;
     margin-left: 230px;
     margin-right: 230px;
-}
+    .card {
+        max-width: 360px;
+        position: relative;
+        overflow: hidden;
 
-.card {
-    max-width: 360px;
-    position: relative;
-    overflow: hidden;
+        img {
+            width: 100%;
+            transition: filter 0.3s ease;
+        }
 
-    img {
-        width: 100%;
-        transition: filter 0.3s ease;
+        &:hover img {
+            filter: brightness(0.5);
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-family: $mainFont;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        p {
+            color: rgb(93, 93, 93);
+            font-family: $mainFont;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 13px;
+        }
+
+        h2 {
+            color: rgb(241, 109, 127);
+            font-family: $mainFont;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-top: 18px;
+        }
     }
 
-    &:hover img {
-        filter: brightness(0.5);
-    }
-
-    h1 {
-        color: rgb(0, 0, 0);
-        font-family: 'Lato';
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 16px;
-        letter-spacing: 0%;
-        text-align: left;
-        margin-top: 25px;
-    }
-
-    p {
-        color: rgb(93, 93, 93);
-        font-family: 'Lato';
+    .add-to-cart {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f8f7f700;
+        color: rgb(255, 255, 255);
+        font-family: $mainFont;
         font-size: 14px;
-        font-weight: 300;
-        line-height: 17px;
-        letter-spacing: 0%;
-        text-align: left;
-        margin-top: 13px;
-    }
-
-    h2 {
-        color: rgb(241, 109, 127);
-        font-family: 'Lato';
-        font-size: 16px;
         font-weight: 400;
-        line-height: 19px;
-        letter-spacing: 0%;
-        text-align: left;
-        margin-top: 18px;
+        line-height: 17px;
+        border: 1;
+        border-color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .card:hover .add-to-cart {
+        opacity: 1;
+    }
+
+    .buttonAllProduct button {
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+        color: rgb(242, 99, 118);
+        border: 1px solid rgb(255, 106, 106);
+        padding: 15px 30px;
+        background: white;
+        font-size: 20px;
+        cursor: pointer;
     }
 }
 
-.add-to-cart {
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f8f7f700;
-    color: rgb(255, 255, 255);
-    font-family: 'Lato';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    border: 1;
-    border-color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.card:hover .add-to-cart {
-    opacity: 1;
-}
-
-.buttonAllProduct button {
-    display: flex;
-    justify-content: center;
-    margin-top: 48px;
-    color: rgb(242, 99, 118);
-    border: 1px solid rgb(255, 106, 106);
-    padding: 15px 30px;
-    background: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.main3 {
+.infoPart {
     height: 341px;
     background: rgb(34, 34, 36);
-}
-
-.main3Icon {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-
+    &__icons {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+        &__icon1,
+        &__icon2,
+        &__icon3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 360px;
+            margin-top: 104px;
+            padding: 20px;
+        }
+    }
+    img {
+        width: 39px;
+        height: auto;
+        margin-bottom: 15px;
+    }
     h1 {
         color: rgb(251, 251, 251);
-        font-family: 'Lato';
+        font-family: $mainFont;
         font-size: 19.96px;
         font-weight: 400;
         line-height: 24px;
-        letter-spacing: 0%;
+        margin-bottom: 16px;
     }
-
     p {
         color: rgb(251, 251, 251);
-        font-family: 'Lato';
+        font-family: $mainFont;
         font-size: 13.97px;
         font-weight: 300;
         line-height: 17px;
-        letter-spacing: 0%;
         text-align: center;
     }
 }
 
-.main3Icon1 {
-    margin-left: 230px;
-    margin-top: 103px;
-    max-width: 360px;
-    align-items: center;
-}
 
-.main3Icon2,
-.main3Icon3 {
-    margin-left: 30px;
-    margin-top: 103px;
-    max-width: 360px;
-    align-items: center;
-}
 
 .preFinalPart {
     height: 448px;
-    background-image: url('./img/page 5/background.png');
+    background-image: url('img/mainPage/page 5/background.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -402,73 +392,203 @@ button {
     align-items: center;
     text-align: center;
     position: relative;
-}
+    &__rightSide {
+        position: relative;
+        z-index: 1;
+        max-width: 557px;
+        max-height: 142px;
+        margin-left: 223px;
 
-.contentLeftSide {
-    position: relative;
-    z-index: 1;
-    max-width: 360px;
-    max-height: 99px;
-    margin-bottom: 126px;
-
-    p {
-        color: rgb(34, 34, 36);
-        font-family: 'Lato';
-        font-style: italic;
-        font-size: 20px;
-        font-weight: 400;
-        margin-top: 30px;
+        h2 {
+            color: rgb(34, 34, 36);
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 167.2%;
+            margin-bottom: 32px;
+        }
     }
+    &__leftSide {
+        position: relative;
+        z-index: 1;
+        max-width: 360px;
+        max-height: 99px;
+        margin-bottom: 126px;
+        p {
+            color: rgb(34, 34, 36);
+            font-family: $mainFont;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 30px;
+        }
 
-    img {
-        margin-left: 98px;
-    }
-}
-
-.contentRightSide {
-    position: relative;
-    z-index: 1;
-    max-width: 557px;
-    max-height: 142px;
-    margin-left: 223px;
-
-    h2 {
-        color: rgb(34, 34, 36);
-        font-family: Lato;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 167.2%;
-        margin-bottom: 32px;
+        img {
+            margin-left: 98px;
+        }
     }
 }
+
 
 .finalPart {
     height: 79px;
     background: rgb(34, 34, 36);
     display: flex;
     align-items: center;
-
+    &__icon1 {
+        margin-left: 655px;
+    }
+    &__icon2 {
+        margin-left: 7px;
+    }
     p {
         color: rgb(251, 251, 251);
-        font-family: 'Lato';
+        font-family: $mainFont;
         font-size: 16px;
         font-weight: 400;
         margin-left: 235px;
     }
-
     button {
         border: 0;
         cursor: pointer;
     }
 }
 
-.icon1Final {
-    margin-left: 655px;
+
+.capProduct{
+    height: 148px;
+    background: rgb(248, 243, 244);
+    display: flex;
+    justify-content: center;
+    gap: 737px;
+    h1 {
+        font-family: $mainFont;
+        margin-top: 59px;
+        color: rgb(241, 109, 127);
+        font-size: 24px;
+        font-weight: 400;
+    }
+    h2 {
+        font-family: $mainFont;
+        margin-top: 65px;
+        font-size: 14px;
+        font-weight: 700;
+        color: rgb(99, 99, 99);
+    }
 }
 
-.icon2Final {
-    margin-left: 7px;
+.slideProduct {
+    height: 777px;
+    background: rgb(247, 247, 247);
+    gap: 459px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    button {
+        width: 47px;
+        height: 47px;
+        background: rgba(42, 42, 42, 0.15);
+        margin-top: 365px;
+        border: 0;
+    }
+    &__buttonSlide{
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
 }
+
+.mainPageProduct{
+    height: 1500px;
+    background: $whiteBackgroundSite;
+    &__spaceProduct{
+        height: 65px;
+        background: $whiteBackgroundSite;
+    }
+    &__infoProduct{
+        box-shadow: 5px 5px 5px 5px grey;
+        width: 1141px;
+        height: 601px;
+        background: $whiteBackgroundSite;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2{
+            padding-top: 65px;
+            color: rgb(241, 109, 127);
+            font-family: $mainFont;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+        }
+        h1{
+            margin-top: 27px;
+            color: rgb(77, 77, 77);
+            font-family: $mainFont;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 22px;
+        }
+        p{
+            margin-top: 49px;
+            margin-left: 292px;
+            max-width: 555px;
+            color: rgb(94, 94, 94);
+            font-family: $mainFont;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+        }
+        h4{
+            margin-top: 33px;
+            color: rgb(239, 91, 112);
+            font-family: $mainFont;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+        }
+    }
+    .button-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 130px;
+    }
+
+    .filterButtonProduct {
+        color: rgb(111, 110, 110);
+        background-color: rgba(28,28,28,0);
+        font-family: $mainFont;
+        font-size: 14px;
+        font-weight: 400;
+        border: 0;
+
+    }
+
+    .cartButtonProduct {
+        margin-top: 64px;
+        color: rgb(242, 99, 118);
+        background-color: rgba(28,28,28,0);
+        border: 0;
+        font-family: $mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+
+    .card{
+        margin-top: 129px;
+    }
+    .card:nth-child(n+4) {
+        display: none;
+    }
+}
+
+
+
 
 @media (min-width: 376px) and (max-width: 1146px) {
     .container {

@@ -36,7 +36,6 @@ button {
 }
 
 .navigation {
-  width: 1600px;
   height: 75px;
   display: flex;
   align-items: center;
@@ -48,33 +47,28 @@ button {
   border: 0;
   cursor: pointer;
 }
-
-.navContent_leftSide1 {
+.navigation__contLeftSide1 {
   display: flex;
   align-items: center;
   margin-left: 231px;
   background: rgb(34, 34, 34);
 }
-
-.navContent_leftSide2 {
+.navigation__contLeftSide2 {
   display: flex;
   align-items: center;
   margin-left: 41px;
 }
-
-.navContent_rightSide1 {
+.navigation__contRightSide1 {
   display: flex;
   align-items: center;
   margin-left: 859px;
 }
-
-.navContent_rightSide2 {
+.navigation__contRightSide2 {
   display: flex;
   align-items: center;
   margin-left: 65px;
 }
-
-.navContent_rightSide3 {
+.navigation__contRightSide3 {
   display: flex;
   align-items: center;
   margin-left: 65px;
@@ -87,142 +81,145 @@ button {
 
 #menu {
   color: rgb(111, 110, 110);
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   list-style-type: none;
-  /* Убираем маркеры списка */
   padding: 0;
-  /* Убираем отступы */
   margin: 0;
-  /* Убираем поля */
   background-color: rgb(255, 255, 255);
-  /* Цвет фона меню */
   border: 1px solid #ccc;
-  /* Рамка вокруг меню */
   position: absolute;
-  /* Чтобы меню не смещалось */
   top: 40px;
-  /* Положение под кнопкой */
   right: 0px;
   top: 75px;
 }
 #menu li {
   padding: 10px;
-  /* Отступы внутри элементов списка */
 }
 #menu li:hover {
   background-color: #e0e0e0;
-  /* Цвет при наведении на элемент списка */
 }
 
 .hidden {
   display: none;
-  /* Скрывает меню */
 }
 
-.mainContent {
+.mainCover {
   display: flex;
   width: 100%;
   align-items: flex-start;
 }
-
-.mainContent_leftSide {
+.mainCover__leftSide {
   display: flex;
   flex: 0 0 800.58px;
 }
-.mainContent_leftSide img {
+.mainCover__leftSide img {
   max-width: 100%;
   height: auto;
 }
-
-.mainContent_rightSide h2 {
+.mainCover__rightSide h2 {
   display: flex;
   justify-content: start;
   align-items: flex-end;
   flex: 1;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   margin-top: 290px;
   font-size: 32px;
   font-weight: 700;
-  letter-spacing: 0%;
 }
-.mainContent_rightSide h1 {
+.mainCover__rightSide h1 {
   display: flex;
   justify-content: start;
   align-items: flex-end;
   flex-grow: 1;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 32px;
   font-weight: 700;
-  letter-spacing: 0%;
 }
 
-.main2 {
+.category {
   position: relative;
-  width: 1600px;
+  width: rgb(241, 228, 230);
   height: 2121px;
   background: rgb(255, 255, 255);
 }
 
-.category {
+.categoryButton {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.category1 {
-  display: flex;
-  flex-direction: space-between;
-  gap: 30px;
-  margin-top: 65px;
-}
-.category1 img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.category2 {
-  display: flex;
-  margin-top: 30px;
-}
-.category2 img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.category button {
+.categoryButton button {
   background: transparent;
   border: 0;
 }
-
-.text {
-  position: relative;
+.categoryButton__smallImg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 65px;
+}
+.categoryButton__smallImg img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.categoryButton__bigImg {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 30px;
+}
+.categoryButton__bigImg img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.categoryButton .item {
+  position: relative; /* ОЧЕНЬ ВАЖНО! Это нужно, чтобы .text позиционировался относительно кнопки */
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.categoryButton .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.categoryButton .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 24px;
+  font-weight: bold;
   text-align: center;
+  padding: 10px 20px;
+  width: 80%;
+  max-width: 90%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mainText h1 {
+.headingCardsText h1 {
   color: rgb(34, 34, 34);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 36px;
-  letter-spacing: 0%;
   text-align: left;
   margin-left: 711px;
   margin-top: 96px;
 }
-.mainText p {
+.headingCardsText p {
   color: rgb(159, 159, 159);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -240,22 +237,21 @@ button {
   margin-left: 230px;
   margin-right: 230px;
 }
-
-.card {
+.cardList .card {
   max-width: 360px;
   position: relative;
   overflow: hidden;
 }
-.card img {
+.cardList .card img {
   width: 100%;
   transition: filter 0.3s ease;
 }
-.card:hover img {
+.cardList .card:hover img {
   filter: brightness(0.5);
 }
-.card h1 {
+.cardList .card h1 {
   color: rgb(0, 0, 0);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
@@ -263,9 +259,9 @@ button {
   text-align: left;
   margin-top: 25px;
 }
-.card p {
+.cardList .card p {
   color: rgb(93, 93, 93);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 17px;
@@ -273,9 +269,9 @@ button {
   text-align: left;
   margin-top: 13px;
 }
-.card h2 {
+.cardList .card h2 {
   color: rgb(241, 109, 127);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -283,15 +279,14 @@ button {
   text-align: left;
   margin-top: 18px;
 }
-
-.add-to-cart {
+.cardList .add-to-cart {
   position: absolute;
   top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(248, 247, 247, 0);
   color: rgb(255, 255, 255);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -303,12 +298,10 @@ button {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-.card:hover .add-to-cart {
+.cardList .card:hover .add-to-cart {
   opacity: 1;
 }
-
-.buttonAllProduct button {
+.cardList .buttonAllProduct button {
   display: flex;
   justify-content: center;
   margin-top: 48px;
@@ -320,52 +313,50 @@ button {
   cursor: pointer;
 }
 
-.main3 {
+.infoPart {
   height: 341px;
   background: rgb(34, 34, 36);
 }
-
-.main3Icon {
+.infoPart__icons {
   display: flex;
   gap: 30px;
-  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.main3Icon h1 {
+.infoPart__icons__icon1, .infoPart__icons__icon2, .infoPart__icons__icon3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 360px;
+  margin-top: 104px;
+  padding: 20px;
+}
+.infoPart img {
+  width: 39px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.infoPart h1 {
   color: rgb(251, 251, 251);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 19.96px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0%;
+  margin-bottom: 16px;
 }
-.main3Icon p {
+.infoPart p {
   color: rgb(251, 251, 251);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 13.97px;
   font-weight: 300;
   line-height: 17px;
-  letter-spacing: 0%;
   text-align: center;
-}
-
-.main3Icon1 {
-  margin-left: 230px;
-  margin-top: 103px;
-  max-width: 360px;
-  align-items: center;
-}
-
-.main3Icon2,
-.main3Icon3 {
-  margin-left: 30px;
-  margin-top: 103px;
-  max-width: 360px;
-  align-items: center;
 }
 
 .preFinalPart {
   height: 448px;
-  background-image: url("./img/page 5/background.png");
+  background-image: url("img/mainPage/page 5/background.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -374,40 +365,38 @@ button {
   text-align: center;
   position: relative;
 }
-
-.contentLeftSide {
-  position: relative;
-  z-index: 1;
-  max-width: 360px;
-  max-height: 99px;
-  margin-bottom: 126px;
-}
-.contentLeftSide p {
-  color: rgb(34, 34, 36);
-  font-family: "Lato";
-  font-style: italic;
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 30px;
-}
-.contentLeftSide img {
-  margin-left: 98px;
-}
-
-.contentRightSide {
+.preFinalPart__rightSide {
   position: relative;
   z-index: 1;
   max-width: 557px;
   max-height: 142px;
   margin-left: 223px;
 }
-.contentRightSide h2 {
+.preFinalPart__rightSide h2 {
   color: rgb(34, 34, 36);
   font-family: Lato;
   font-size: 18px;
   font-weight: 400;
   line-height: 167.2%;
   margin-bottom: 32px;
+}
+.preFinalPart__leftSide {
+  position: relative;
+  z-index: 1;
+  max-width: 360px;
+  max-height: 99px;
+  margin-bottom: 126px;
+}
+.preFinalPart__leftSide p {
+  color: rgb(34, 34, 36);
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+.preFinalPart__leftSide img {
+  margin-left: 98px;
 }
 
 .finalPart {
@@ -416,9 +405,15 @@ button {
   display: flex;
   align-items: center;
 }
+.finalPart__icon1 {
+  margin-left: 655px;
+}
+.finalPart__icon2 {
+  margin-left: 7px;
+}
 .finalPart p {
   color: rgb(251, 251, 251);
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin-left: 235px;
@@ -428,12 +423,129 @@ button {
   cursor: pointer;
 }
 
-.icon1Final {
-  margin-left: 655px;
+.capProduct {
+  height: 148px;
+  background: rgb(248, 243, 244);
+  display: flex;
+  justify-content: center;
+  gap: 737px;
+}
+.capProduct h1 {
+  font-family: "Lato", sans-serif;
+  margin-top: 59px;
+  color: rgb(241, 109, 127);
+  font-size: 24px;
+  font-weight: 400;
+}
+.capProduct h2 {
+  font-family: "Lato", sans-serif;
+  margin-top: 65px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(99, 99, 99);
 }
 
-.icon2Final {
-  margin-left: 7px;
+.slideProduct {
+  height: 777px;
+  background: rgb(247, 247, 247);
+  gap: 459px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.slideProduct button {
+  width: 47px;
+  height: 47px;
+  background: rgba(42, 42, 42, 0.15);
+  margin-top: 365px;
+  border: 0;
+}
+.slideProduct__buttonSlide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mainPageProduct {
+  height: 1500px;
+  background: rgb(255, 255, 255);
+}
+.mainPageProduct__spaceProduct {
+  height: 65px;
+  background: rgb(255, 255, 255);
+}
+.mainPageProduct__infoProduct {
+  box-shadow: 5px 5px 5px 5px grey;
+  width: 1141px;
+  height: 601px;
+  background: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.mainPageProduct__infoProduct h2 {
+  padding-top: 65px;
+  color: rgb(241, 109, 127);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+.mainPageProduct__infoProduct h1 {
+  margin-top: 27px;
+  color: rgb(77, 77, 77);
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.mainPageProduct__infoProduct p {
+  margin-top: 49px;
+  margin-left: 292px;
+  max-width: 555px;
+  color: rgb(94, 94, 94);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+}
+.mainPageProduct__infoProduct h4 {
+  margin-top: 33px;
+  color: rgb(239, 91, 112);
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+}
+.mainPageProduct .button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 130px;
+}
+.mainPageProduct .filterButtonProduct {
+  color: rgb(111, 110, 110);
+  background-color: rgba(28, 28, 28, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+}
+.mainPageProduct .cartButtonProduct {
+  margin-top: 64px;
+  color: rgb(242, 99, 118);
+  background-color: rgba(28, 28, 28, 0);
+  border: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.mainPageProduct .card {
+  margin-top: 129px;
+}
+.mainPageProduct .card:nth-child(n+4) {
+  display: none;
 }
 
 @media (min-width: 376px) and (max-width: 1146px) {
