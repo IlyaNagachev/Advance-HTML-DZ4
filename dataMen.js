@@ -1,4 +1,6 @@
-const dataProduct = `
+//Пока не работает
+
+const dataProductMen = `
   [
     {
         "name": "ELLERY X M'O CAPSULE",
@@ -41,24 +43,10 @@ const dataProduct = `
         "url": "./img/mainPage/page 3/items6.png",
         "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         "price": "52.00"
-      },
+      }
       {
         "name": "ELLERY X M'O CAPSULE",
         "product-list": "7",
-        "url": "./img/mainPage/page 3/items6.png",
-        "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-        "price": "52.00"
-      },
-      {
-        "name": "ELLERY X M'O CAPSULE",
-        "product-list": "8",
-        "url": "./img/mainPage/page 3/items6.png",
-        "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
-        "price": "52.00"
-      },
-      {
-        "name": "ELLERY X M'O CAPSULE",
-        "product-list": "9",
         "url": "./img/mainPage/page 3/items6.png",
         "text": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
         "price": "52.00"

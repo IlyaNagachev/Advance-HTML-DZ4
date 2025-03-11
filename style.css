@@ -10,6 +10,7 @@ body {
   scroll-behavior: smooth;
   background: rgb(241, 228, 230);
   height: 764px;
+  overflow-x: hidden;
 }
 
 img {
@@ -75,31 +76,74 @@ button {
   margin-top: 15px;
 }
 
-.menu-container {
+.menuSite-container {
   position: relative;
 }
 
-#menu {
+#check {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+
+#check:checked ~ .menuSite {
+  right: 0px;
+}
+
+.menuSite {
+  width: 232px;
+  position: absolute;
+  top: 75px;
+  right: -232px;
+  padding: 32px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.menuSite__heading {
+  font-style: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.menuSite__subheading {
+  font-style: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.menuSite__ul a {
+  display: flex;
+  flex-direction: column;
   color: rgb(111, 110, 110);
-  font-family: "Lato", sans-serif;
+  padding-left: 20px;
+}
+.menuSite__ul a:hover {
+  color: #F16D7F;
+}
+
+.menuSite__ul li {
+  list-style-type: none;
+}
+
+.menuSite__link {
+  text-decoration: none;
+  color: rgb(111, 110, 110);
+  font-style: normal;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #ccc;
-  position: absolute;
-  top: 40px;
-  right: 0px;
-  top: 75px;
 }
-#menu li {
-  padding: 10px;
-}
-#menu li:hover {
-  background-color: #e0e0e0;
+.menuSite__link:hover {
+  color: #F16D7F;
 }
 
 .hidden {
@@ -230,6 +274,10 @@ button {
   margin-bottom: 48px;
 }
 
+.cardListMain .card:nth-child(n+7) {
+  display: none;
+}
+
 .cardList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -241,6 +289,9 @@ button {
   max-width: 360px;
   position: relative;
   overflow: hidden;
+}
+.cardList .card .card:nth-child(n+7) {
+  display: none;
 }
 .cardList .card img {
   width: 100%;
@@ -548,6 +599,10 @@ button {
   display: none;
 }
 
+.catalogCardMen {
+  background: rgb(255, 255, 255);
+}
+
 @media (min-width: 376px) and (max-width: 1146px) {
   .container {
     max-width: 770px;
@@ -650,6 +705,229 @@ button {
     margin-left: 7px;
   }
 }
+.catalogMenFilter {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  height: 134px;
+  background: rgb(255, 255, 255);
+}
+.catalogMenFilter summary {
+  display: block;
+}
+.catalogMenFilter summary::-webkit-details-marker {
+  display: none;
+}
+.catalogMenFilter summary::before {
+  padding-right: 0.5em;
+}
+.catalogMenFilter__filter {
+  margin-top: 51px;
+  margin-left: 246px;
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+}
+.catalogMenFilter__filter #check {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+.catalogMenFilter__filter #check:checked ~ .menu {
+  right: -232px;
+}
+.catalogMenFilter__filter .menu {
+  width: 232px;
+  position: absolute;
+  top: 300px;
+  left: 230px;
+  padding: 32px;
+  z-index: 3;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.catalogMenFilter__filter .menu__heading {
+  color: rgb(111, 110, 110);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  padding: 19px;
+  border-bottom: 1px solid rgb(111, 110, 110);
+}
+.catalogMenFilter__filter .menu__heading:hover {
+  color: #F16D7F;
+}
+.catalogMenFilter__filter .menu__ul a {
+  display: flex;
+  flex-direction: column;
+  color: rgb(111, 110, 110);
+  gap: 11px;
+  padding-left: 20px;
+}
+.catalogMenFilter__filter .menu__ul a:hover {
+  color: #F16D7F;
+}
+.catalogMenFilter__filter .menu__ul li {
+  list-style-type: none;
+}
+.catalogMenFilter__filter .menu__link {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  padding: 5px;
+}
+.catalogMenFilter__sort {
+  display: flex;
+  margin-top: 51px;
+  margin-right: 704px;
+  gap: 28px;
+  color: rgb(111, 110, 110);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.catalogMenFilter__sort .details {
+  position: relative;
+}
+.catalogMenFilter__sort .details__box {
+  position: absolute;
+  z-index: 2;
+  top: 22px;
+  background: white;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding: 7px 9px 11px;
+  box-sizing: border-box;
+  width: 79px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardListMen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+.cardListMen .cardMen {
+  max-width: 360px;
+  position: relative;
+  overflow: hidden;
+}
+.cardListMen .cardMen img {
+  width: 100%;
+  transition: filter 0.3s ease;
+}
+.cardListMen .cardMen:hover img {
+  filter: brightness(0.5);
+}
+.cardListMen .cardMen h1 {
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 25px;
+}
+.cardListMen .cardMen p {
+  color: rgb(93, 93, 93);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 13px;
+}
+.cardListMen .cardMen h2 {
+  color: rgb(241, 109, 127);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 18px;
+}
+.cardListMen .cardMen .add-to-cartMen {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(248, 247, 247, 0);
+  color: rgb(255, 255, 255);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  border: 1px;
+  border-color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.cardListMen .cardMen .card:hover .add-to-cartMen {
+  opacity: 1;
+}
+.cardListMen .cardMen .buttonAllProduct button {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  color: rgb(242, 99, 118);
+  border: 1px solid rgb(255, 106, 106);
+  padding: 15px 30px;
+  background: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.controlProduct {
+  background: rgb(255, 255, 255);
+}
+.controlProduct__firstSpace {
+  height: 80px;
+}
+.controlProduct__secondSpace {
+  height: 100px;
+}
+.controlProduct__pagination {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+}
+.controlProduct__pagination a {
+  text-decoration: none;
+  font-style: "Lato", sans-serif;
+  color: #333;
+  padding: 8px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.controlProduct__pagination a:hover {
+  background: rgb(241, 109, 127);
+  color: white;
+}
+.controlProduct__pagination .pagination .active {
+  background: rgb(241, 109, 127);
+}
+.controlProduct__pagination .pagination .disabled {
+  color: #ccc;
+  pointer-events: none;
+}
+
 @media (max-width: 375px) {
   .container {
     max-width: 375px;
