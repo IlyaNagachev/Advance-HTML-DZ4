@@ -423,9 +423,34 @@ button {
   max-height: 142px;
   margin-left: 223px;
 }
+.preFinalPart__rightSide input {
+  width: 256px;
+  height: 49px;
+  background: rgb(225, 225, 225);
+  color: rgb(34, 34, 36);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  border: 0;
+  border-radius: 50px 0px 0px 50px;
+}
+.preFinalPart__rightSide button {
+  background: rgb(241, 109, 127);
+  height: 49px;
+  width: 100px;
+  color: rgb(255, 255, 255);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  border: 0;
+  border-radius: 0px 50px 50px 0px;
+  cursor: pointer;
+}
 .preFinalPart__rightSide h2 {
   color: rgb(34, 34, 36);
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 167.2%;
@@ -601,6 +626,187 @@ button {
 
 .catalogCardMen {
   background: rgb(255, 255, 255);
+}
+
+.capBasket {
+  height: 148px;
+  background: rgb(248, 243, 244);
+  display: flex;
+}
+.capBasket h1 {
+  font-family: "Lato", sans-serif;
+  padding-left: 233px;
+  margin-top: 59px;
+  color: rgb(241, 109, 127);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.basket {
+  background: rgb(255, 255, 255);
+  height: 998px;
+}
+.basket__up {
+  display: flex;
+  justify-content: space-between;
+}
+.basket__up__leftSide {
+  display: flex;
+}
+.basket__up__leftSide img {
+  width: 262px;
+}
+.basket__up__leftSide h1 {
+  color: rgb(34, 34, 34);
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  margin-bottom: 70px;
+  margin-left: 31px;
+}
+.basket__up__leftSide p {
+  font-family: "Lato", sans-serif;
+  color: rgb(111, 110, 110);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 6px;
+  margin-left: 31px;
+}
+.basket__up__leftSide p input {
+  width: 30px;
+}
+.basket__up__leftSide button {
+  font-family: "Lato", sans-serif;
+  border: 0;
+  background: 0;
+  margin-bottom: 260px;
+  margin-right: 22px;
+  cursor: pointer;
+}
+.basket__up__leftSide .cartBasket {
+  max-width: 652px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 230px;
+}
+.basket__up__leftSide .cartBasket__cart1 {
+  display: flex;
+  align-items: center;
+  margin-top: 96px;
+  margin-bottom: 40px;
+  box-shadow: 10px 10px 5px rgba(111, 110, 110, 0.5);
+}
+.basket__up__leftSide .cartBasket__cart2 {
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 5px rgba(111, 110, 110, 0.5);
+}
+.basket__up__leftSide text {
+  display: flex;
+}
+.basket__up__rightSide .menuBasket__address {
+  min-width: 360px;
+  min-height: 272px;
+  margin-top: 113px;
+  margin-right: 230px;
+}
+.basket__up__rightSide .menuBasket__address h2 {
+  color: rgb(34, 34, 34);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-bottom: 23px;
+}
+.basket__up__rightSide .menuBasket__address form {
+  color: rgb(34, 34, 34);
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  margin-bottom: 23px;
+}
+.basket__up__rightSide .menuBasket__address form input {
+  background: 0;
+  border-color: rgba(74, 74, 74, 0.5);
+  min-width: 360px;
+  min-height: 45px;
+}
+.basket__up__rightSide .menuBasket__address button {
+  min-width: 102px;
+  min-height: 35px;
+  background: 0;
+  border-color: rgba(74, 74, 74, 0.5);
+  color: rgb(34, 34, 34);
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  cursor: pointer;
+}
+.basket__up__rightSide .menuBasket__checkout {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  height: 214px;
+  width: 360px;
+  background: rgb(245, 243, 243);
+  margin-top: 57px;
+}
+.basket__up__rightSide .menuBasket__checkout h2 {
+  color: rgb(74, 74, 74);
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-top: 39px;
+  margin-right: 34px;
+}
+.basket__up__rightSide .menuBasket__checkout h1 {
+  color: rgb(74, 74, 74);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin-right: 34px;
+  margin-top: 12px;
+}
+.basket__up__rightSide .menuBasket__checkout button {
+  color: rgb(255, 255, 255);
+  font-family: "Lato", sans-serif;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  background: #F16D7F;
+  width: 273px;
+  height: 50px;
+  margin-top: 39px;
+  margin-right: 43px;
+  cursor: pointer;
+}
+.basket__down {
+  display: flex;
+  justify-content: center;
+  align-content: end;
+  margin-top: 72px;
+  gap: 130px;
+  margin-right: 530px;
+}
+.basket__down button {
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  background: 0;
+  border-color: rgba(74, 74, 74, 0.5);
+  width: 235px;
+  height: 50px;
+  cursor: pointer;
 }
 
 @media (min-width: 376px) and (max-width: 1146px) {
