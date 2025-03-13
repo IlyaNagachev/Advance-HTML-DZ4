@@ -674,7 +674,7 @@ button {
     background: $whiteBackgroundSite;
 }
 
-.capBasket {
+.capBasketRegistration {
     height: 148px;
     background: rgb(248, 243, 244);
     display: flex;
@@ -858,6 +858,108 @@ button {
             cursor: pointer;
 
         }
+    }
+}
+
+.registration {
+    background: $whiteBackgroundSite;
+    display: flex;
+    justify-content: space-between;
+    &__leftSide {
+        .menuRegistration{
+            display: flex;
+            flex-direction: column;
+            margin-left: 231px;
+            margin-top: 64px;
+            h2{
+                color: rgb(34, 34, 34);
+                font-family: $mainFont;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 19px;
+                margin-bottom: 21px;
+            }
+            .sqrInputRegistration{
+                min-height: 45px;
+                min-width: 360px;
+                background: 0;
+                border-color: rgb(74, 74, 74, 0.5);
+                margin-top: 20px;
+                color: rgb(177, 177, 177);
+                font-family: $mainFont;
+                font-size: 13px;
+                font-weight: 300;
+                line-height: 16px;
+            }
+            .chooseInputRegistration {
+                color: rgb(0, 0, 0);
+                font-family: $mainFont;
+                font-size: 11px;
+                font-weight: 300;
+                line-height: 13px;
+                margin-top: 33px;
+                margin-bottom: 35px;
+
+                input{
+                    margin-left: 20px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+            }
+
+        }
+        p{
+            margin-top: 15px;
+            margin-bottom: 39px;
+            color: rgb(177, 177, 177);
+            font-family: $mainFont;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 16px;
+        }
+        button{
+            color: rgb(255, 255, 255);
+            font-family: $mainFont;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            width: 167px;
+            height: 50px;
+            background: rgb(241, 109, 127);
+            border: 0;
+            cursor: pointer;
+            margin-bottom: 96px;
+        }
+    }
+    &__rightSide{
+        margin-left: 128px;
+        h1{
+            color: rgb(0, 0, 0);
+            font-family: $mainFont;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+            margin-top: 64px;
+        }
+        h2{
+            color: rgb(0, 0, 0);
+            font-family: $mainFont;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+            margin-top: 22px;
+            margin-bottom: 21px;
+        }
+        p{
+            color: rgb(0, 0, 0);
+            font-family: $mainFont;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 29px;
+            margin-bottom: 16px;
+        }
+
+
     }
 }
 

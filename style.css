@@ -628,12 +628,12 @@ button {
   background: rgb(255, 255, 255);
 }
 
-.capBasket {
+.capBasketRegistration {
   height: 148px;
   background: rgb(248, 243, 244);
   display: flex;
 }
-.capBasket h1 {
+.capBasketRegistration h1 {
   font-family: "Lato", sans-serif;
   padding-left: 233px;
   margin-top: 59px;
@@ -807,6 +807,102 @@ button {
   width: 235px;
   height: 50px;
   cursor: pointer;
+}
+
+.registration {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+}
+.registration__leftSide .menuRegistration {
+  display: flex;
+  flex-direction: column;
+  margin-left: 231px;
+  margin-top: 64px;
+}
+.registration__leftSide .menuRegistration h2 {
+  color: rgb(34, 34, 34);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  margin-bottom: 21px;
+}
+.registration__leftSide .menuRegistration .sqrInputRegistration {
+  min-height: 45px;
+  min-width: 360px;
+  background: 0;
+  border-color: rgba(74, 74, 74, 0.5);
+  margin-top: 20px;
+  color: rgb(177, 177, 177);
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+}
+.registration__leftSide .menuRegistration .chooseInputRegistration {
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+  margin-top: 33px;
+  margin-bottom: 35px;
+}
+.registration__leftSide .menuRegistration .chooseInputRegistration input {
+  margin-left: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.registration__leftSide p {
+  margin-top: 15px;
+  margin-bottom: 39px;
+  color: rgb(177, 177, 177);
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+}
+.registration__leftSide button {
+  color: rgb(255, 255, 255);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  width: 167px;
+  height: 50px;
+  background: rgb(241, 109, 127);
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 96px;
+}
+.registration__rightSide {
+  margin-left: 128px;
+}
+.registration__rightSide h1 {
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-top: 64px;
+}
+.registration__rightSide h2 {
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-top: 22px;
+  margin-bottom: 21px;
+}
+.registration__rightSide p {
+  color: rgb(0, 0, 0);
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 376px) and (max-width: 1146px) {
